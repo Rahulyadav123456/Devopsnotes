@@ -1,0 +1,125 @@
+•	Git is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+•	Git allows users to track code changes and manage their project using simple commands.
+
+•	First, we will create git local repository in our local computer, so this can be done by using git init command.
+•	There are three different stages in git, Working Directory, Staging Area, Local Repository.
+1. Working Directory: - In working directory, where you see files physically and do modification. These are Modified files, but untracked and not yet ready for commit.
+2. Staging Area: - Then by using git add the modified files moves from working directory to staging area. Adding modified files to the staging environment means they are ready for commit.
+3. Commit: - Whenever you do commit an operation. Git looks for the files present in staging area. only those files present in the staging area are considered for commit not for all modified files.
+
+
+Centralized Version Control System (CVCS): -
+
+ 
+
+•	It is not locally available meaning you always need to be connected to a network to perform any actions.
+•	Since everything is centralized, if central server gets failed, you will lose entire data. E.g.: - SVN tool.
+Distributed Version Control System (DVCS): -
+ 
+
+In Distributed Version control system, every contributor has a local copy or clone in the main Repository i.e., everyone maintains a local Repository of their own which contains all the files and metadata present in main repository.
+
+
+
+
+
+Git version 
+git version 2.37.1
+
+Git Commands 
+git config: - 
+•	git config –global user.name “[name]”
+•	git config –global user.email “[email address]”    
+Configure the username and email address.
+git init: -
+•	git init [repository name]
+ initialize an empty repository. / This command is used to start a new repository.
+git add: -
+•	git add [file]
+This command adds a file to the staging area.
+•	git add *
+ Add one or more files to the staging area.
+git diff: -
+•	git diff 
+view the changes made to the file. / This command shows the file           differences which are not yet staged.
+•	git diff –staged
+This command shows the differences between the files in the staging area and the latest version present.
+•	git diff [first branch] [second branch]  
+This command shows the differences between the two branches mentioned.
+git commit: -
+•	git commit -m “[ Type in the commit message]”
+Commit changes to the head but not to the remote repository.
+
+•	git commit -a  
+This command commits any files you’ve added with the git add command and also commits any files you’ve changed since then.
+git clone: - 
+•	git clone [URL]  
+This command is used to obtain a repository from an existing URL.
+git status: - 
+•	git status  
+This command lists all the files that have to be committed. 
+git rm: -
+•	git rm [file]  
+This command deletes the file from your working directory and stages the deletion.
+git log: -
+•	git log  
+This command is used to list the version history for the current branch.
+•	git log –follow [file]
+This command lists version history for a file, including the renaming of files also.
+git show: - 
+•	git show [commit]  
+This command shows the metadata and content changes of the specified commit.
+git tag: -
+•	git tag [commitID]  
+This command is used to give tags to the specified commit.
+
+git branch: - 
+•	git branch
+ This command lists all the local branches in the current repository.
+•	git branch [branch name]
+This command creates a new branch.
+•	git branch -d [branch name]
+This command deletes the feature branch.
+git checkout: -
+•	git checkout [branch name]
+This command is used to switch from one branch to another.
+•	git checkout -b [branch name]
+This command creates a new branch and also switches to it.
+git merge: - 
+•	git merge [branch name]
+This command merges the specified branch’s history into the current branch.
+git remote: - 
+•	git remote add [variable name] [Remote server link]
+This command is used to connect your local repository to the remote server.
+git push: - 
+            The git push command is used to upload local repository content to a remote repository.
+•	git push [variable name] master 
+This command sends the committed changes of master branch to your remote repository.
+•	git push [variable name] [branch]
+This command sends the branch commits to your remote repository.
+•	git push [variable name] : [branch name] 
+This command deletes a branch on your remote repository.
+git pull: -
+•	git pull [Repository Link]  
+This command fetches and merges changes on the remote server to your working directory.
+git stash: - Suppose you are implementing a new feature for your product. Your code is in progress and suddenly a customer escalation comes, Because of this you have to keep a side your new feature work for few hours.
+                         You cannot commit your partial code and also cannot throw away your changes. So, you need some temporary storage, when you can store your partial changes and later on commit it.
+
+•	git stash save 
+This command temporarily stores all the modified tracked files.
+•	git stash list
+This command lists all stashed changesets.
+
+git reset: -
+•	git reset [file]  
+This command unstages the file, but it preserves the file contents.
+•	git reset [commit]
+This command undoes all the commits after the specified commit and preserves the changes locally.
+•	git reset –hard [commit]
+This command discards all history and goes back to the specified commit.
+
+git revert: -
+•	It is used for undoing changes to a repository's commit history.
+git rebase: - 
+•	Git rebase is a command that allows developers to integrate changes from one branch to another.
+
