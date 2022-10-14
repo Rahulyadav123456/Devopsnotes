@@ -1,0 +1,149 @@
+DOCKER
+-	DOCKER is a very popular and powerful open-source containerized platform designed to create, deploy and run web applications.
+-	Docker uses container on the host O.S. to run application. It allows application to use the same Linux kernel as a system on the host computer, rather than creating a whole virtual O.S.
+-	We can install docker on any O.S. but Docker engine runs natively on Linux Distribution.
+-	Docker written in “Go” language.
+-	Docker is a tool that performs O.S level virtualization, also known as Containerization.
+-	Before Docker, many users face the problem that a particular code is running the developer’s system but not in the user’s system.
+-	Docker is a set of platforms as a service that uses O.S level Virtualization whereas VMware uses Hardware Level Virtualization.
+
+Advantages Of Docker: - 
+-	No pre allocation of Ram.
+-	Docker enables you to build a container image and use that same image across every step of the deployment process.
+-	It can run on physical Hardware or virtual Hardware or on cloud.
+-	You can re-use the image.
+-	It takes very less time to create container.
+DisAdvantages of Docker: -  
+-	Docker is not a good solution for applications that requires rich GUI.
+-	Difficult to manage large number of containers.
+-	No solutions for data recovery and Backups.
+
+
+
+
+
+
+
+Components Of Docker: -
+-	Docker Container: -
+1.	Container hold the entire packages that is needed to run the applications.
+2.	Container is like a virtual machine.
+3.	Images becomes container when they run on the docker engine.
+-	Docker Images: -
+1.	Docker images are the read only binary templates used to create docker container.
+Ways to create an Images: -
+-	Take image from docker hub. (docker pull [image name])
+-	Create image from Docker File. (docker build -t [image name])
+-	Create image from existing docker container. 
+-	Docker Hub: -
+-	Docker hub manages and stores the docker images.
+-	Public Registry= Public registry is also called Docker Hub.
+-	Private Registry= It is used to share images within the enterprise.
+-	Docker Engine: -
+-	Docker engine runs on the Host O.S.
+-	It is responsible for running containers to manage docker services.
+-	Docker engine can communicate with other docker engine.
+-	Docker Host: -
+-	Docker Host is used to provide an environment to execute and run applications.
+-	It contains the docker engine, images, containers, networks and storage. 
+Docker Commands
+To see all images, present in your local machine: -
+•	docker images 
+To find out images in docker hub: -
+•	docker search jenkins
+To download image from Docker hub to local machine: - 
+•	docker pull jenkins
+To check service is start or not: -
+•	service docker start [ To start docker]
+•	service docker status [To check status]
+
+To see all container: -
+•	docker ps -a
+To see only running container: -
+•	docker ps                          [ps= Process status]
+To run the image and make container of it: -
+•	docker run -itd --name [containername] [image-id] /bin/bash [make container direct]
+•	docker run -itd [image-id] /bin/bash [make container from images]
+To delete container/images: -
+•	docker rm [container name] [To stop container]
+•	docker rmi [image name] [To stop Image]
+To start/stop container: -
+•	docker start [container name]
+•	docker stop [container name]
+Detail of container and images: -
+•	docker inspect 
+To go inside container: -
+•	docker attach [container name]
+
+Docker Volumes: -
+•	Volumes is simply a directory inside our container.
+•	Firstly, we have to declare this directory as a volume and then share volume.
+•	Even, if we stop container, still we can access volumes.
+•	Volume will be created in one container.
+•	You can declare a directory as a volume only while creating container.
+•	You can share one volume across any container.
+•	Volumes will not be included when you update an image.
+
+Important Commands: - 
+•	docker volume create [volume name]
+•	docker volume rm [volume name]
+•	docker volume prune {It removed all unused docker volume}
+•	docker volume inspect [volume name]
+Docker Networks: -
+1)	Bridge Network: - Bridge is a Network which is a bridge between your Docker host and Docker engine.
+Container uses “Bridge Network”
+Port uses “Host Network”
+2)	Host Network
+Commands: - 
+1)	To create a network: -
+            docker network create [network name]
+2)	To list a Network: 
+docker network ls 
+3)	To inspect the Docker Container: -
+docker container inspect [container ID]
+4)	To connect that network: - 
+docker network connect [network ID] [container ID]
+5)	To disconnect that network: -
+docker network disconnect [network ID] [Container ID/ Container Name]
+
+6)	To give your own IP address and create network: 
+docker network create dev-team --subnet=10.100.0.0/24
+
+7)	To create container and connect that container with your own IP address: -
+docker run -it --name=webserver--network=dev-team --ip=10.100.0.100 ubuntu:14.04 /bin/bash 
+
+
+				       
+
+
+
+Docker Compose
+•	Docker Compose is a tool that was developed to help define and share multi-container applications.
+•	With Compose, we can create a YAML file to define the services and with a single command, can spin everything up or tear it all down.
+
+Commands: -
+•	To show the docker compose version: -
+docker-compose version
+•	To create and start containers: -
+docker-compose up -d 
+docker-compose up -f [filename.yml] -d
+•	To stop containers: - 
+docker-compose down 
+•	To scale up the containers: -
+docker-compose scale  
+•	To list the containers: - 
+docker-compose ps
+•	To remove stopped containers: -
+docker-compose rm [filename]
+•	Execute a command in a running container: -
+docker-compose exec 
+•	Force stops service containers: - 
+docker-compose kill 
+•	View output from containers: - 
+docker-compose logs 
+
+Notes: - 
+The file must be in YAML format.
+The filename is written by this way.
+ [docker-compose.yml or docker-compose.yaml]
+
