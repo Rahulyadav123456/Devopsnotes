@@ -1,0 +1,39 @@
+DevOps
+(Implementing automation at each and every stage)
+•	DevOps is the combination of two words i.e., Development and Operations.
+•	DevOps is the practice of an operations and development engineers participating together in the entire software development lifecycle from design through the development process to production supports.
+•	The main objective of DevOps is to shorten the system’s development lifecycle.
+•	DevOps is a Methodology that allows single team to manage the entire application Development lifecycle, that is development, testing, deployment and operations. 
+
+DevOps Stages:
+1)	CONTINUOUS DEVELOPMENT: -
+•	This is the phase that involves ‘planning ‘and ‘coding ‘of the software.
+•	The vision of the project is decided during the planning phase and the developers begin developing the code for the application.
+•	There are no DevOps tools that are required for planning, but there are a number of tools for maintaining the code.
+•	The most popular tools used are Git, SVN, Mercurial, CVS, and JIRA.
+
+
+
+2)	CONTINUOUS TESTING: - 
+•	This is the stage where the developed software is continuously tested for bugs.
+•	For Continuous testing, automation testing tools like Selenium, TestNG, JUnit, etc. are used.
+•	These tools allow QAs to test multiple code bases thoroughly in parallel to ensure that there are no flaws in the functionality.
+
+3)	Continuous Integration: -
+•	This stage is the heart of the entire DevOps life cycle.
+•	It is a software development practice in which the developers require to commit changes to the source code more frequently. 
+•	Every commit is then built and this allows early detection of problems if they are present.
+•	Building code not only involves compilation but it also includes code review, unit testing, integration testing, and packaging.
+•	Jenkins is a very popular tool used in this phase. Whenever there is a change in the Git repository, Jenkins fetches the updated code and it prepares a build of that code which is an executable file in the form of a war or a jar. This build is then forwarded to the test server or the production server.
+
+4)	Continuous Deployment: - 
+•	This is the stage where the code is deployed to the production servers.
+•	It is also important to ensure that the code is correctly deployed on all the servers.
+•	the new code is deployed on a continuous basis, configuration management tools play an important role in executing tasks quickly and frequently.
+•	Some popular tools that are used here are Puppet, Chef, Salt Stack, and Ansible.
+
+
+5)	Continuous Monitoring: -
+•	This is a very crucial stage of the DevOps life cycle where you continuously monitor the performance of your application.
+•	The popular tools used for this are Splunk, ELK Stack, Nagios, New Relic and Sensu. 
+
