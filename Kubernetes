@@ -1,0 +1,20 @@
+
+
+Kubernetes
+•	Kubernetes is an open-source Container Management Tool which automates Container Deployment, Container Scaling & Container Load Balancing.
+•	It schedules, run and manages isolated containers such are running on Virtual machine/Cloud Machines.
+•	All top Cloud providers support Kubernetes.
+
+Cloud Based K8s Services: -
+GKE= Google Kubernetes Service.
+AKS= Azure Kubernetes Service.
+Amazon EKS= Elastic Kubernetes Service.
+
+Kubernetes Installation Tools: -
+-	Minikube
+-	Kubeadm
+Problems with scaling up the containers: - 
+•	Containers cannot communicate with each other.
+•	Autoscaling and load Balancing was not possible.
+•	Containers had to be moved carefully.
+
